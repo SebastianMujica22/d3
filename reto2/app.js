@@ -19,8 +19,8 @@ const render = (data) => {
   console.log(d3.max(data, (d) => d.lifeexpectancy));
   var x = d3
     .scaleLinear()
-    .domain([0, d3.max(data, (d) => d.purchasingpower)])
-    .range([0, width]);
+    .domain([0, d3.max(data, (d) => d.purchasingpower)*1.3])
+    .range([0, inWidth]);
   svg
     .append("g")
     .attr("transform", "translate(0," + height + ")")
